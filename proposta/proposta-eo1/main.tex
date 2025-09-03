@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+\usepackage{graphicx,url}
+\usepackage[utf8]{inputenc} 
+\usepackage[portuguese]{babel}
+\usepackage{placeins}
+\usepackage{makecell}
+\usepackage{xcolor}
+
+\sloppy
+
+\title{Proposta de estudo orientado: Um modelo explicável para classificação de arritmias cardíacas a partir de sinais de ECG com uso de arquitetura transformer}
+
+\author{Orientadora: Taiane Coelho Ramos\inst{1}, Orientando: Douglas Blanc Pereira\inst{1}}
+
+\address{Instituto de Informática -- Universidade Federal Fluminense
+  (UFF)\\
+  Av. Gal. Milton Tavares de Souza, s/n - São Domingos, Niterói - RJ, 24210-310
+  \email{dpereira@id.uff.br, taiane\_ramos@id.uff.br}   
+}
+\begin{document} 
+
+\maketitle
+
+\section{Descrição do tema}
+
+As arritmias cardíacas representam anomalias nos impulsos elétricos do coração, resultando em alterações do ritmo cardíaco que podem ser indicativas de doenças potencialmente fatais. As doenças cardiovasculares são a principal causa de morte no Brasil e uma das líderes em óbitos globais, tornando o diagnóstico precoce um fator crucial para a redução da mortalidade. O eletrocardiograma (ECG) é o exame primário para essa investigação, devido ao seu baixo custo e rapidez\cite{zirpolo2025modelo,da2024arritmias}.
+
+Porém, a análise de sinais de ECG enfrenta desafios significativos, como a necessidade de interpretação por especialistas, a suscetibilidade a ruídos e a baixa sensibilidade para certas condições, o que pode levar a divergências diagnósticas. Para mitigar essas limitações, sistemas automatizados baseados em aprendizado profundo (Deep Learning) têm demonstrado grande potencial, oferecendo análises mais precisas e assertivas \cite{ansari2023deep}.
+
+Estudos recentes têm obtido sucesso na classificação de arritmias utilizando Redes Neurais Recorrentes (RNNs), especialmente a arquitetura Long Short-Term Memory (LSTM), que é adequada para analisar séries temporais como o ECG \cite{zirpolo2025modelo}.
+
+Este estudo orientado propõe avançar em relação a essa abordagem, investigando o uso da arquitetura \textit{transformer}. Originalmente projetada para tarefas de processamento de linguagem natural, \textcolor{red}{a arquitetura \textit{transformer} pode ser eficaz para tarefas de classificação de séries temporais, como o ECG??? Ler \cite{vaswani2017attention}.}
+
+\textcolor{red}{Possibilidade do uso de mecanismos de atenção para explicar o comportamento do modelo??? Ler \cite{jain2019attention}, \cite{lundberg2017unified} e \cite{wiegreffe2019attention}.}
+
+O objetivo principal deste estudo é preparar uma proposta de dissertação sobre o tema, através da realização de uma revisão de literatura \cite{kitchenham2004procedures}, adquirindo conhecimento sobre o estado da arte e buscando problemas em aberto que envolvam o uso de arquitetura transformer para classificação de arritmias cardíacas com foco em explicabilidade através do uso da camada de atenção.
+
+\section{Resultados esperados} 
+
+Revisão de literatura sobre a aplicação de arquiteturas transformer para a classificação de séries temporais, com foco em sinais biomédicos como o ECG.
+
+Explorar o uso de atenção para explicabilidade.
+
+Um protótipo do modelo transformers e obtenção de resultados preliminares.
+
+Uma proposta de pesquisa de dissertação e redação de um esboço de artigo a ser submetido no semestre seguinte.
+
+\section{Critérios de avaliação} 
+
+A avaliação será baseada nos seguintes itens:
+\begin{enumerate}   
+
+\item Cumprimento das etapas e prazos definidos via tarefas do \textit{classroom}; 
+\item Qualidade e clareza dos relatórios de estudo parcial e final; 
+\item Apresentação final dos resultados obtidos durante o estudo.
+\end{enumerate}
+
+\section{Cronograma de atividades}
+
+O orientando se reunirá semanalmente com a orientadora por uma hora. O acompanhamento das atividades será realizado via \textit{classroom}.
+
+\begin{table}[!ht]
+\caption{Cronograma das atividades (Semanas 1 a 13)}
+
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+
+\textbf{Atividade} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} &  \textbf{8} &  \textbf{9} & \textbf{10} & \textbf{11} & \textbf{12} & \textbf{13}  \\ 
+  \hline
+  \makecell[l]{Elaboração de proposta \\ de estudo orientado} & X & & & & & & & & & & & & \\
+  \hline
+  \makecell[l]{Identificação e seleção \\ de estudos} & & X & X & X & & & & & & & & & \\
+  \hline
+  \makecell[l]{Extração e síntese \\ dos dados} & & & & & X & X & X & X & & & & & \\
+  \hline     
+  \makecell[l]{Redação de esboço \\ de artigo} & & & & & & & & & X & X & X & X & X \\
+  \hline
+  \makecell[l]{Proposta de pesquisa \\ de dissertação} & & & & & & & & & X & X & X & X & X \\
+  \hline
+   
+\end{tabular}
+\label{tab:cronograma}
+\end{table} 
+
+\FloatBarrier
+\bibliographystyle{sbc}
+\bibliography{sbc-template} 
+
+\vfill
+
+\begin{flushright}
+Niterói, \today
+\end{flushright}
+
+\vspace{3cm}
+
+\begin{center}
+    \begin{minipage}{0.6\textwidth}
+        \centering
+        \rule{\linewidth}{0.4pt} \\
+        Dra. Taiane Coelho Ramos (orientadora)
+    \end{minipage}
+\end{center}
+
+\vspace{2cm}
+
+\begin{center}
+    \begin{minipage}{0.6\textwidth}
+        \centering
+        \rule{\linewidth}{0.4pt} \\
+        Douglas Blanc Pereira (orientando)
+    \end{minipage}
+\end{center}
+\end{document}
